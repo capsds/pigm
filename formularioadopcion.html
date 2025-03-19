@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Servicio de alerta de pérdida de mascotas y servicio de adopción">
+    <meta name="author" content="C.A.P.S Desarrollo de Software">
+    <title>PIGM - Encuentra, ayuda y adopta</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="ico/icon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-3 fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand text-white fw-bold d-flex align-items-center" href="index.html">
+                    <img src="img/logopigm.avif" alt="Logo P.I.G.M." class="me-2" width="40" height="40">
+                    P.I.G.M.
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fw-bold">
+                        <li class="nav-item"><a class="nav-link" href="alertaperdida.html">Alerta de Pérdida</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mascotasperdidas.html">Mascotas Perdidas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="formularioadopcion.html">Formulario de
+                                Adopción</a></li>
+                        <li class="nav-item"><a class="nav-link" href="adopcion.html">Adopta una Mascota</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <br><br><br>
+        <!-- Adopction Form-->
+        <section class="py-4 mt-4 mb-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="p-4 p-md-5 rounded shadow-lg"
+                            style="background: linear-gradient(135deg, #48c6ef, #6f86d6);">
+                            <div class="text-center mb-4 text-white">
+                                <h1 class="display-6 fw-bolder text-white">🏡 Formulario de Adopción</h1>
+                                <p class="text-white">Completa la información para poner en adopción a tu mascota.</p>
+                            </div>
+                            <form id="adopcionForm">
+                                <!-- Información de la Mascota -->
+                                <fieldset class="border p-4 mb-4 rounded text-white">
+                                    <legend class="w-auto px-3 text-white fw-bold">🐾 Información de la Mascota</legend>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="nombreMascota"
+                                                class="form-label fw-semibold text-white">Nombre</label>
+                                            <input type="text" class="form-control" id="nombreMascota"
+                                                placeholder="Ej. Luna" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="tipoMascota"
+                                                class="form-label fw-semibold text-white">Tipo</label>
+                                            <select class="form-select" id="tipoMascota" required>
+                                                <option selected disabled>Selecciona una opción</option>
+                                                <option value="perro">Perro</option>
+                                                <option value="gato">Gato</option>
+                                                <option value="otro">Otro</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="raza" class="form-label fw-semibold text-white">Raza</label>
+                                            <input type="text" class="form-control" id="raza"
+                                                placeholder="Ej. Labrador, Persa">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="color" class="form-label fw-semibold text-white">Color</label>
+                                            <input type="text" class="form-control" id="color"
+                                                placeholder="Ej. Marrón, Blanco">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="edad" class="form-label fw-semibold text-white">Edad
+                                            Aproximada</label>
+                                        <input type="text" class="form-control" id="edad"
+                                            placeholder="Ej. 1 año, Cachorro">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="estadoSalud" class="form-label fw-semibold text-white">Estado de
+                                            Salud</label>
+                                        <textarea class="form-control" id="estadoSalud" rows="2"
+                                            placeholder="Ej. Vacunado, Esterilizado, Sin problemas de salud"
+                                            required></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="caracteristicas"
+                                            class="form-label fw-semibold text-white">Personalidad o
+                                            Comportamiento</label>
+                                        <textarea class="form-control" id="caracteristicas" rows="2"
+                                            placeholder="Ej. Juguetón, Dócil, Bueno con niños" required></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="razonAdopcion" class="form-label fw-semibold text-white">Razón para
+                                            dar en adopción</label>
+                                        <textarea class="form-control" id="razonAdopcion" rows="2"
+                                            placeholder="Ej. Cambio de residencia, Situación económica"
+                                            required></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="fotoMascota" class="form-label fw-semibold text-white">📸
+                                            Foto</label>
+                                        <input type="file" class="form-control" id="fotoMascota" accept="image/*"
+                                            required>
+                                    </div>
+                                </fieldset>
+
+                                <!-- Datos de Contacto -->
+                                <fieldset class="border p-4 mb-4 rounded text-white">
+                                    <legend class="w-auto px-3 text-white fw-bold">📞 Datos de Contacto</legend>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="nombreContacto"
+                                                class="form-label fw-semibold text-white">Nombre</label>
+                                            <input type="text" class="form-control" id="nombreContacto"
+                                                placeholder="Tu nombre" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="telefono"
+                                                class="form-label fw-semibold text-white">Teléfono</label>
+                                            <input type="tel" class="form-control" id="telefono"
+                                                placeholder="Ej. 555-123-4567" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label fw-semibold text-white">Correo
+                                            Electrónico</label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="Ej. tuemail@ejemplo.com" required>
+                                    </div>
+                                </fieldset>
+
+                                <!-- Botón -->
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-lg text-white"
+                                        style="background: linear-gradient(90deg, #004aad, #007bff);">
+                                        🏡 Publicar para Adopción
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to action section-->
+    </main>
+    <!-- Footer -->
+    <footer class="text-white py-4 mt-auto">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+                <p class="mb-0 fw-bold">Síguenos:</p>
+                <a href="#" class="text-white" style="font-size: 1.8rem;"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white" style="font-size: 1.8rem;"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white" style="font-size: 1.8rem;"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-white" style="font-size: 1.8rem;"><i class="bi bi-tiktok"></i></a>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+                <p class="mb-0">&copy; 2025 C.A.P.S. Desarrollo de Software</p>
+                <p class="mb-0">📧 capsdesarrollodesoftware@gmail.com </p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
